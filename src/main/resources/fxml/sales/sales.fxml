@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.shoeshop.controller.SalesController"
+      spacing="10" style="-fx-padding: 10;">
+
+    <Label text="Продажи" style="-fx-font-size: 16; -fx-font-weight: bold;"/>
+
+    <HBox spacing="20">
+        <VBox spacing="10" style="-fx-pref-width: 400;">
+            <Label text="Доступные товары:"/>
+            <TableView fx:id="productsTable">
+                <columns>
+                    <TableColumn text="Товар" prefWidth="200"/>
+                    <TableColumn text="Цена" prefWidth="100"/>
+                </columns>
+            </TableView>
+            <Button text="Добавить в корзину" onAction="#addToCart"/>
+        </VBox>
+
+        <VBox spacing="10" style="-fx-pref-width: 400;">
+            <HBox spacing="10">
+                <Label text="Клиент:"/>
+                <ComboBox fx:id="clientCombo" promptText="Выберите клиента" style="-fx-pref-width: 200;"/>
+            </HBox>
+
+            <Label text="Корзина:"/>
+            <TableView fx:id="cartTable" style="-fx-pref-height: 200;">
+                <columns>
+                    <TableColumn text="Товар" prefWidth="150"/>
+                    <TableColumn text="Кол-во" prefWidth="80"/>
+                    <TableColumn text="Сумма" prefWidth="100"/>
+                </columns>
+            </TableView>
+
+            <HBox spacing="10">
+                <Button text="Удалить" onAction="#removeFromCart"/>
+                <Button text="Очистить" onAction="#clearCart"/>
+            </HBox>
+
+            <HBox spacing="10">
+                <Label text="Оплата:"/>
+                <ComboBox fx:id="paymentMethodCombo" style="-fx-pref-width: 150;"/>
+            </HBox>
+
+            <Label fx:id="totalLabel" style="-fx-font-weight: bold; -fx-font-size: 14;"/>
+            <Button text="Оформить заказ" onAction="#createOrder" style="-fx-pref-width: 200;"/>
+        </VBox>
+    </HBox>
+</VBox>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.shoeshop.controller.OrderDetailsController"
+      spacing="10" style="-fx-padding: 15;">
+
+    <Label fx:id="orderIdLabel" style="-fx-font-size: 16; -fx-font-weight: bold;"/>
+    <HBox spacing="20">
+        <Label fx:id="customerLabel"/>
+        <Label fx:id="dateLabel"/>
+    </HBox>
+
+    <TableView fx:id="detailsTable" style="-fx-pref-height: 200;">
+        <columns>
+            <TableColumn text="Товар" prefWidth="200"/>
+            <TableColumn text="Количество" prefWidth="100"/>
+            <TableColumn text="Цена" prefWidth="100"/>
+            <TableColumn text="Сумма" prefWidth="100"/>
+        </columns>
+    </TableView>
+
+    <Label fx:id="totalLabel" style="-fx-font-size: 14; -fx-font-weight: bold;"/>
+
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Button text="Закрыть" onAction="#handleClose"/>
+    </HBox>
+</VBox>

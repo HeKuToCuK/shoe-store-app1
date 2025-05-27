@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8.0.171"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.shoeshop.controller.OrderHistoryController"
+      spacing="10">
+
+    <TableView fx:id="ordersTable">
+        <columns>
+            <TableColumn text="№ заказа" prefWidth="80"/>
+            <TableColumn text="Дата" prefWidth="150"/>
+            <TableColumn text="Сумма" prefWidth="100"/>
+        </columns>
+    </TableView>
+</VBox>

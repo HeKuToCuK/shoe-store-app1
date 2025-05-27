@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.shoeshop.controller.MainController">
+
+    <top>
+        <MenuBar>
+            <Menu text="Программа">
+                <MenuItem text="Выход" onAction="#handleExit"/>
+            </Menu>
+            <Menu text="Помощь">
+                <MenuItem text="О программе" onAction="#handleHelpButton"/>
+            </Menu>
+        </MenuBar>
+    </top>
+
+    <center>
+        <TabPane fx:id="tabPane" tabClosingPolicy="UNAVAILABLE">
+            <!-- Вкладки будут добавляться динамически -->
+        </TabPane>
+    </center>
+
+    <bottom>
+        <Label text="Система управления магазином обуви" style="-fx-font-style: italic; -fx-padding: 5;"/>
+    </bottom>
+</BorderPane>

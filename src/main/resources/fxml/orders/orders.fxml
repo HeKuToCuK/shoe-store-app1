@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.shoeshop.controller.OrdersController"
+      spacing="10" style="-fx-padding: 15;">
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Период:"/>
+        <DatePicker fx:id="fromDatePicker"/>
+        <Label text="-"/>
+        <DatePicker fx:id="toDatePicker"/>
+        <Button text="Загрузить" onAction="#loadOrders"/>
+    </HBox>
+
+    <TableView fx:id="ordersTable">
+        <columns>
+            <TableColumn text="№" prefWidth="50"/>
+            <TableColumn text="Дата" prefWidth="150"/>
+            <TableColumn text="Клиент" prefWidth="200"/>
+            <TableColumn text="Сумма" prefWidth="100"/>
+        </columns>
+    </TableView>
+
+    <HBox spacing="10">
+        <Button text="Детали" onAction="#showOrderDetails"/>
+    </HBox>
+</VBox>

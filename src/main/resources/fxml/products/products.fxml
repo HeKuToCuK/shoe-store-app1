@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.shoeshop.controller.ProductsController"
+      spacing="10" style="-fx-padding: 15;">
+
+    <HBox spacing="10">
+        <Button fx:id="addButton" text="Добавить товар" onAction="#openAddProductDialog"/>
+        <Button text="Обновить" onAction="#refreshProducts"/>
+        <TextField fx:id="searchField" promptText="Поиск..."/>
+        <ComboBox fx:id="supplierFilter"/>
+    </HBox>
+
+    <TableView fx:id="productsTable">
+        <columns>
+            <TableColumn text="Название" prefWidth="250"/>
+            <TableColumn text="Цена" prefWidth="100"/>
+            <TableColumn text="Остаток" prefWidth="80"/>
+        </columns>
+    </TableView>
+</VBox>

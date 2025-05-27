@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.shoeshop.controller.CustomersController"
+      spacing="10" style="-fx-padding: 15;">
+
+    <HBox spacing="10">
+        <TextField fx:id="searchField" promptText="Поиск..."/>
+        <Button text="Найти" onAction="#refreshCustomers"/>
+        <Button text="Добавить" onAction="#addCustomer"/>
+    </HBox>
+
+    <TableView fx:id="customersTable">
+        <columns>
+            <TableColumn text="ФИО" prefWidth="200"/>
+            <TableColumn text="Телефон" prefWidth="150"/>
+            <TableColumn text="Email" prefWidth="200"/>
+        </columns>
+    </TableView>
+</VBox>

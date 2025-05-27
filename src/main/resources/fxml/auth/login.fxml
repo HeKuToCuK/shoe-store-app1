@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.shoeshop.controller.AuthController"
+      spacing="10"
+      alignment="CENTER"
+      style="-fx-padding: 20;">
+
+    <Label text="Магазин обуви - Авторизация" style="-fx-font-size: 18;"/>
+    <TextField fx:id="usernameField" promptText="Логин" style="-fx-min-width: 200px;"/>
+    <PasswordField fx:id="passwordField" promptText="Пароль" style="-fx-min-width: 200px;"/>
+    <Button text="Войти" onAction="#handleLogin" style="-fx-min-width: 200px;"/>
+</VBox>
